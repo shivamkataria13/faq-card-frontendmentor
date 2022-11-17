@@ -1,0 +1,195 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    min-height: 100vh;
+    background-image: linear-gradient(180deg, #af67e9,  #6565e7 );
+    font-family: "kumbh sans", "sans serif";
+    font-size: .75rem;
+    place-items: center;
+}
+
+.hidden{
+    display: none;
+}
+
+/* .main-container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+} */
+
+.mainbg{
+    background-color: white;
+    min-height: 45rem;
+    min-width: 20rem;
+    max-width: 60rem;    
+    width: 90%;
+    height: auto;
+    display: grid;
+    grid-template-rows: 25% 75%;
+    margin: 20vh auto;
+    border-radius: 2rem;
+    transition: width .3s ease;
+    position: relative;
+}
+
+.pic{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.picture{
+    position: relative;
+}
+
+.illustration{
+    position: relative;
+    top: -12.5rem;
+    width: 100%;
+    height: auto;
+    max-height: 20rem;
+}
+
+.pattern{
+    position: relative;
+    top: -30vh;
+    width: 100%;
+    height: auto;
+    min-width: 37vh;
+}
+
+.box{
+    display: none;
+}
+
+.text{
+    display: grid;
+    grid-template-columns: 85%;
+    justify-content: center;
+    margin: 0vh 0 2vh;
+}
+
+.faq{
+    font-weight: 700;
+    font-size: 3rem;
+    text-align: center;
+    margin: 0vh 0 2vh;
+}
+
+.ques{
+    font-family: "kumbh sans", "sans serif";
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: 25ms;
+}
+
+.ques:hover{
+    color: #f47c57;
+}
+
+/* .arrow, .p{
+    flex-basis: 1;
+} */
+
+.quesans{
+    border-bottom: 1px solid #a7a7b6;
+    width: 100%;
+    padding: 0;
+    margin: 0vh 0 3vh;
+}
+
+
+.quesans.active > .ques{
+    font-weight: 700;
+    transition: font-weight .3s;
+}
+
+.quesans.active .arrow{
+    transform: rotate(180deg); 
+    transition: transform .3s;
+}
+
+.answer{
+    padding: .5vh 0 0 0;
+    font-size: 1.2rem;
+    overflow: hidden;
+    transition: max-height 1s ease-in-out, padding 1s;
+}
+
+
+
+
+@media (min-width: 1000px){
+    .mainbg{
+        grid-template-rows: 100%;
+        grid-template-columns: 50% 50%;
+        width: 70%;
+        min-height: 60vh;
+        max-width: 85rem;
+        gap: 0;
+    }
+    
+    .pic{
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .illustration{
+        position: absolute;
+        top: 8vh;
+        left: -9.5vh;
+        max-height: 31rem;
+        z-index: 0;
+    }
+    
+    .pattern{
+        top: 2vh;
+        left: -9.5vh;
+    }
+    
+    section{
+        overflow: hidden;
+        position: relative;
+    }
+
+    .box{
+        display: block;
+        position: absolute;
+        top: 22.5vh;
+        left: -13vh;
+    }
+
+    .text{
+        display: flex;
+        /* gap: 1vh; */
+        flex-direction: column;
+        padding: 3vh 5vh 3vh 0;
+    }
+    
+    .faq{
+        text-align: left;
+        padding: 3vh 0 4vh;
+    }
+
+    .quesans{
+        padding: 0 0 1.5rem 0rem;
+        margin: 0vh 0 2vh;
+    }
+
+
+}
+

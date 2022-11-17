@@ -1,2 +1,2 @@
-# faq-card-frontendmentor
+# faq accordian card frontendmentor
  
